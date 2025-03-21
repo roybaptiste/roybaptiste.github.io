@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="v2.0, 2025-03-21">
+<meta name="author" content="Baptiste ROY">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-<title>CV | Baptiste ROY</title>
+<title>Curriculum Vitae | Baptiste ROY</title>
 <style>
 /* CV Custom Styles for Baptiste ROY */
 
@@ -24,6 +24,7 @@
     --transition: all 0.3s ease;
     --border-radius: 6px;
     --tag-bg: #edf2f7;
+    --highlight-color: #ffeb3b;
 }
 
 /* Base Styles */
@@ -47,6 +48,8 @@ body {
     padding: 2rem;
     text-align: center;
     border-bottom: 5px solid var(--accent-color);
+    position: relative;
+    overflow: hidden;
 }
 
 #header h1 {
@@ -55,18 +58,31 @@ body {
     font-weight: 700;
 }
 
+#header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+}
+
 #toc {
     border-right: 1px solid #e2e8f0;
     background-color: white;
     padding-top: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 #toc a {
     color: var(--second-color);
     border-left: 3px solid transparent;
     transition: var(--transition);
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     display: block;
+    margin-bottom: 0.25rem;
 }
 
 #toc a:hover, #toc a.active {
@@ -82,22 +98,32 @@ body {
 }
 
 /* Section Headers */
-.section-header {
+h2 {
     color: var(--main-color);
     border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.7rem;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+h2 i.fa, h2 .icon {
+    margin-right: 0.5rem;
+    color: var(--accent-color);
 }
 
 /* Introduction */
 .lead {
     font-size: 1.4rem;
     font-weight: 500;
-    text-align: center;
-    margin: 1rem 0;
     color: var(--main-color);
+    margin: 1.5rem 0;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .intro {
@@ -107,7 +133,6 @@ body {
     margin: 1.5rem 0;
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
-    text-align: center;
 }
 
 /* Cards */
@@ -118,6 +143,7 @@ body {
     margin-bottom: 1.5rem;
     overflow: hidden;
     transition: var(--transition);
+    padding: 1.5rem;
 }
 
 .card:hover {
@@ -125,8 +151,8 @@ body {
     transform: translateY(-3px);
 }
 
-.card-block {
-    padding: 1.5rem;
+.card.profile {
+    border-top: 4px solid var(--accent-color);
 }
 
 .card-title {
@@ -144,6 +170,20 @@ body {
 
 .card-content {
     padding-left: 1rem;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.grid-none td {
+    padding: 0.7rem;
+}
+
+table.stripes-even tr:nth-child(even) {
+    background-color: var(--light-color);
 }
 
 /* Experience Timeline */
@@ -186,7 +226,6 @@ body {
 .experience {
     margin-left: 3.5rem;
     margin-bottom: 2.5rem;
-    padding: 1.5rem;
 }
 
 /* Horizontal definition lists */
@@ -226,6 +265,11 @@ body {
     transform: scale(1.05);
 }
 
+.tag.highlight {
+    background-color: var(--accent-color);
+    color: white;
+}
+
 /* Education Section */
 .education {
     padding: 1.5rem;
@@ -244,28 +288,15 @@ body {
 
 .skills, .interests {
     height: 100%;
-    padding: 1.5rem;
 }
 
-.stars {
+.skills.border {
+    border-left: 3px solid var(--accent-color);
+}
+
+/* Icon styles */
+.accent, [role="accent"] {
     color: var(--accent-color);
-    letter-spacing: 0.1rem;
-}
-
-.interest, .book {
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.interest::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-}
-
-.book {
-    color: var(--light-text);
 }
 
 /* Footer */
@@ -273,18 +304,19 @@ body {
     text-align: center;
     padding: 2rem 0;
     margin-top: 3rem;
-    color: var(--light-text);
     border-top: 1px solid var(--light-color);
+    color: var(--light-text);
+    font-size: 0.9rem;
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 768px) {
     .columns {
         flex-direction: column;
     }
     
     .timeline h3, .experience {
-        margin-left: 2.5rem;
+        margin-left: 2rem;
     }
     
     .hdlist td.hdlist1 {
@@ -303,19 +335,15 @@ body {
     }
     
     .card:hover {
-        box-shadow: var(--card-shadow);
         transform: none;
+        box-shadow: none;
     }
     
     #content {
-        width: 100%;
-        max-width: 100%;
         padding: 0;
     }
     
     .tag:hover {
-        background-color: var(--tag-bg);
-        color: var(--second-color);
         transform: none;
     }
 } 
@@ -325,28 +353,30 @@ body {
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>CV | Baptiste ROY</h1>
+<h1>Curriculum Vitae | Baptiste ROY</h1>
 <div class="details">
-<span id="author" class="author">v2.0, 2025-03-21</span><br>
+<span id="author" class="author">Baptiste ROY</span><br>
 <span id="email" class="email"><a href="mailto:roy.baptiste45@gmail.com">roy.baptiste45@gmail.com</a></span><br>
+<span id="revnumber">version 2.0,</span>
+<span id="revdate">2024-03-21</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_profil_personnel"><span class="section-header"><span class="icon"><i class="fa fa-user"></i></span> Profil Personnel</span></a></li>
-<li><a href="#_expérience_professionnelle"><span class="section-header"><span class="icon"><i class="fa fa-briefcase"></i></span> Expérience Professionnelle</span></a></li>
+<li><a href="#profil-personnel"><span class="icon"><i class="fa fa-user"></i></span> Profil Personnel</a></li>
+<li><a href="#experience-professionnelle"><span class="icon"><i class="fa fa-briefcase"></i></span> Expérience Professionnelle</a></li>
 <li><a href="#_formation"><span class="section-header"><span class="icon"><i class="fa fa-graduation-cap"></i></span> Formation</span></a></li>
-<li><a href="#_compétences"><span class="section-header"><span class="icon"><i class="fa fa-cogs"></i></span> Compétences</span></a></li>
+<li><a href="#competences"><span class="icon"><i class="fa fa-cogs"></i></span> Compétences</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph lead text-center">
 <p>EXPERT DEVOPS ENGINEER - OBSERVABILITY ADMIN</p>
 </div>
-<div class="exampleblock intro">
+<div class="exampleblock intro text-center">
 <div class="content">
 <div class="paragraph">
 <p>Ce Curriculum Vitae a été réalisé en format HTML5 grâce à AsciiDoctor - Github Actions - Github Pages</p>
@@ -356,59 +386,48 @@ body {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_profil_personnel"><a class="anchor" href="#_profil_personnel"></a><a class="link" href="#_profil_personnel"><span class="section-header"><span class="icon"><i class="fa fa-user"></i></span> Profil Personnel</span></a></h2>
+<h2 id="profil-personnel"><a class="anchor" href="#profil-personnel"></a><a class="link" href="#profil-personnel"><span class="icon"><i class="fa fa-user"></i></span> Profil Personnel</a></h2>
 <div class="sectionbody">
-<div class="exampleblock card">
+<div class="openblock card profile">
 <div class="content">
-<div class="openblock card-block">
-<div class="content">
-<div class="hdlist">
-<table>
+<table class="tableblock frame-none grid-none stripes-even stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
 <tr>
-<td class="hdlist1">
-Qui-suis-je?
-</td>
-<td class="hdlist2">
-<p>Baptiste ROY - <span class="icon"><i class="fa fa-birthday-cake"></i></span> <code>20/08/1990</code></p>
-</td>
+<th class="tableblock halign-left valign-top"><strong>Qui-suis-je?</strong></th>
+<th class="tableblock halign-left valign-top">Baptiste ROY - 20/08/1990</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Contacts &amp; Réseaux sociaux</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-envelope"></i></span> <a href="mailto:roy.baptiste45@gmail.com" class="external" target="_blank" rel="noopener">E-Mail <a href="mailto:roy.baptiste45@gmail.com">roy.baptiste45@gmail.com</a></a></p>
+</div></div></td>
 </tr>
 <tr>
-<td class="hdlist1">
-Contacts &amp; Réseaux sociaux
-</td>
-<td class="hdlist2">
-<p><a href="mailto:roy.baptiste45@gmail.com"><span class="icon"><i class="fa fa-envelope"></i></span> E-Mail <code>roy.baptiste45@gmail.com</code></a>
-| <a href="https://github.com/roybaptiste" target="_blank" rel="noopener"><span class="icon"><i class="fa fa-github"></i></span> Github <code>roybaptiste</code></a>
-| <a href="https://twitter.com/BaptisteRoy37" target="_blank" rel="noopener"><span class="icon"><i class="fa fa-twitter"></i></span> <code>@BaptisteRoy37</code></a>
-| <a href="https://www.linkedin.com/in/roy-baptiste/" target="_blank" rel="noopener"><span class="icon"><i class="fa fa-linkedin"></i></span> Linkedin Profile</a></p>
-</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/roybaptiste" class="external" target="_blank" rel="noopener">Github roybaptiste</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-twitter"></i></span> <a href="https://twitter.com/BaptisteRoy37" class="external" target="_blank" rel="noopener">@BaptisteRoy37</a></p></td>
 </tr>
 <tr>
-<td class="hdlist1">
-Location
-</td>
-<td class="hdlist2">
-<p><span class="icon"><i class="fa fa-map-marker"></i></span> <code>10 passage Contreau Le Mans</code> <span class="image"><img src="data:image/png;base64,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" alt="fr" width="15"></span></p>
-</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-linkedin"></i></span> <a href="https://www.linkedin.com/in/roy-baptiste/" class="external" target="_blank" rel="noopener">Linkedin Profile</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Location</strong></p></td>
 </tr>
 <tr>
-<td class="hdlist1">
-Phone
-</td>
-<td class="hdlist2">
-<p><span class="icon"><i class="fa fa-phone"></i></span> <code>+33(0)6 63 15 30 15</code></p>
-</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10 passage Contreau Le Mans</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Phone</strong></p></td>
 </tr>
+</tbody>
 </table>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
 <div class="sect1">
-<h2 id="_expérience_professionnelle"><a class="anchor" href="#_expérience_professionnelle"></a><a class="link" href="#_expérience_professionnelle"><span class="section-header"><span class="icon"><i class="fa fa-briefcase"></i></span> Expérience Professionnelle</span></a></h2>
+<h2 id="experience-professionnelle"><a class="anchor" href="#experience-professionnelle"></a><a class="link" href="#experience-professionnelle"><span class="icon"><i class="fa fa-briefcase"></i></span> Expérience Professionnelle</a></h2>
 <div class="sectionbody">
 <div class="exampleblock timeline">
 <div class="content">
@@ -422,7 +441,7 @@ Phone
 Période
 </td>
 <td class="hdlist2">
-<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>Février 2024</code> - <span class="icon"><i class="fa fa-calendar-check-o"></i></span> <code>Actuel</code></p>
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>Février 2024</code> - <span class="icon accent"><i class="fa fa-calendar-check-o"></i></span> <code>Actuel</code></p>
 </td>
 </tr>
 </table>
@@ -460,7 +479,7 @@ Période
 <div class="ulist tech-tags">
 <ul>
 <li>
-<p><span class="tag">Python</span></p>
+<p><span class="tag highlight">Python</span></p>
 </li>
 <li>
 <p><span class="tag">React</span></p>
@@ -475,10 +494,10 @@ Période
 <p><span class="tag">Quarkus</span></p>
 </li>
 <li>
-<p><span class="tag">OpenTelemetry</span></p>
+<p><span class="tag highlight">OpenTelemetry</span></p>
 </li>
 <li>
-<p><span class="tag">Grafana</span></p>
+<p><span class="tag highlight">Grafana</span></p>
 </li>
 <li>
 <p><span class="tag">QuickWit</span></p>
@@ -895,7 +914,7 @@ Diplôme
 </div>
 </div>
 <div class="sect1">
-<h2 id="_compétences"><a class="anchor" href="#_compétences"></a><a class="link" href="#_compétences"><span class="section-header"><span class="icon"><i class="fa fa-cogs"></i></span> Compétences</span></a></h2>
+<h2 id="competences"><a class="anchor" href="#competences"></a><a class="link" href="#competences"><span class="icon"><i class="fa fa-cogs"></i></span> Compétences</a></h2>
 <div class="sectionbody">
 <div class="exampleblock columns">
 <div class="content">
@@ -903,77 +922,65 @@ Diplôme
 <div class="content">
 <div class="exampleblock card skills">
 <div class="content">
-<div class="paragraph">
-<p><mark>#</mark> <span class="icon"><i class="fa fa-language"></i></span> Langues</p>
-</div>
-<div class="hdlist">
-<table>
+<h3 id="_langues" class="discrete">Langues</h3>
+<table class="tableblock frame-none grid-rows stripes-even stretch">
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<tbody>
 <tr>
-<td class="hdlist1">
-Français
-</td>
-<td class="hdlist2">
-<p><span class="stars">★★★★★</span> (Natif)</p>
-</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Français</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon accent"><i class="fa fa-star"></i></span> <span class="icon accent"><i class="fa fa-star"></i></span> <span class="icon accent"><i class="fa fa-star"></i></span> <span class="icon accent"><i class="fa fa-star"></i></span> <span class="icon accent"><i class="fa fa-star"></i></span> (Natif)</p></td>
 </tr>
 <tr>
-<td class="hdlist1">
-Anglais
-</td>
-<td class="hdlist2">
-<p><span class="stars">★★★★☆</span> (Technique)</p>
-</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anglais</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon accent"><i class="fa fa-star"></i></span> <span class="icon accent"><i class="fa fa-star"></i></span> <span class="icon accent"><i class="fa fa-star"></i></span> <span class="icon accent"><i class="fa fa-star"></i></span> <span class="icon accent"><i class="fa fa-star-o"></i></span> (Technique)</p></td>
 </tr>
 <tr>
-<td class="hdlist1">
-Espagnol
-</td>
-<td class="hdlist2">
-<p><span class="stars">★★☆☆☆</span> (Notions)</p>
-</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Espagnol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon accent"><i class="fa fa-star"></i></span> <span class="icon accent"><i class="fa fa-star"></i></span> <span class="icon accent"><i class="fa fa-star-o"></i></span> <span class="icon accent"><i class="fa fa-star-o"></i></span> <span class="icon accent"><i class="fa fa-star-o"></i></span> (Notions)</p></td>
 </tr>
+</tbody>
 </table>
-</div>
 </div>
 </div>
 </div>
 </div>
 <div class="openblock column">
 <div class="content">
-<div class="exampleblock card interests">
+<div class="exampleblock card skills border">
 <div class="content">
-<div class="paragraph">
-<p><mark>#</mark> <span class="icon"><i class="fa fa-heart"></i></span> Centre d&#8217;intêret</p>
-</div>
+<h3 id="_centre_dintêret" class="discrete">Centre d&#8217;intêret</h3>
 <div class="ulist">
 <ul>
 <li>
-<p><span class="interest">Veille technologique</span></p>
+<p><span class="icon"><i class="fa fa-search"></i></span> Veille technologique</p>
 </li>
 <li>
-<p><span class="interest">Domotique</span></p>
+<p><span class="icon"><i class="fa fa-home"></i></span> Domotique</p>
 </li>
 <li>
-<p><span class="interest">Windows / Linux / Debian / Mac</span></p>
+<p><span class="icon"><i class="fa fa-desktop"></i></span> Windows / Linux / Debian / Mac</p>
 </li>
 <li>
-<p><span class="interest">Conférences IT</span></p>
+<p><span class="icon"><i class="fa fa-users"></i></span> Conférences IT</p>
 </li>
 <li>
-<p><span class="interest">Jeux en réseau</span></p>
+<p><span class="icon"><i class="fa fa-gamepad"></i></span> Jeux en réseau</p>
 </li>
 <li>
-<p><span class="interest">VTT</span></p>
+<p><span class="icon"><i class="fa fa-bicycle"></i></span> VTT</p>
 </li>
 <li>
-<p><span class="interest">Lecture</span></p>
+<p><span class="icon"><i class="fa fa-book"></i></span> Lecture</p>
 <div class="ulist">
 <ul>
 <li>
-<p><span class="book">Clean Code</span></p>
+<p>Clean Code</p>
 </li>
 <li>
-<p><span class="book">The Phoenix Project (DevOps)</span></p>
+<p>The Phoenix Project (DevOps)</p>
 </li>
 </ul>
 </div>
@@ -998,7 +1005,8 @@ Espagnol
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-21 19:20:59 UTC
+Version 2.0<br>
+Last updated 2025-03-21 19:35:10 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
@@ -1008,5 +1016,29 @@ if (!hljs.initHighlighting.called) {
   ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
 }
 </script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
