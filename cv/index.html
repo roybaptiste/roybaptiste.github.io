@@ -74,17 +74,25 @@ h2 {
 }
 
 h3 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    color: #2c5aa0;
 }
 
 /* Experience Section */
 .period {
     text-align: right;
     font-size: 14px;
-    margin-top: -25px;
+    margin-top: -30px;
     margin-bottom: 10px;
+}
+
+/* Experience headers */
+.timeline h3 {
+    background-color: #f0f5ff;
+    padding: 5px 10px;
+    border-left: 3px solid #2c5aa0;
 }
 
 /* List Styles */
@@ -121,6 +129,43 @@ li {
 .columns.tech-columns .tag {
     display: block;
     margin-bottom: 5px;
+}
+
+/* Competence Table */
+table.competence-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    border: none;
+}
+
+table.competence-table td {
+    padding: 3px 8px;
+    vertical-align: top;
+    width: 33.33%;
+    border: none;
+    background: none;
+}
+
+table.competence-table .tag {
+    display: block;
+    margin-bottom: 5px;
+    background-color: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Supprimer les bordures des tableaux de compétences */
+table.competence-table, 
+table.competence-table tr, 
+table.competence-table td, 
+table.competence-table th {
+    border: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* Education */
@@ -192,7 +237,7 @@ table.tableblock a:hover {
     }
     
     h3 {
-        font-size: 11pt;
+        font-size: 14pt;
     }
     
     li {
@@ -203,7 +248,7 @@ table.tableblock a:hover {
         font-size: 9pt;
     }
     
-    table.tableblock {
+    table.tableblock, table.competence-table {
         background-color: transparent;
     }
     
@@ -340,75 +385,35 @@ Période
 <div class="paragraph card-title">
 <p><strong>Technologies et compétences:</strong></p>
 </div>
-<div class="exampleblock tech-tags columns tech-columns">
-<div class="content">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag highlight">Python</span></p>
-</li>
-<li>
-<p><span class="tag">React</span></p>
-</li>
-<li>
-<p><span class="tag">FastAPI</span></p>
-</li>
-<li>
-<p><span class="tag">Java 23</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Quarkus</span></p>
-</li>
-<li>
-<p><span class="tag highlight">OpenTelemetry</span></p>
-</li>
-<li>
-<p><span class="tag highlight">Grafana</span></p>
-</li>
-<li>
-<p><span class="tag">QuickWit</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Examplars / Mimir</span></p>
-</li>
-<li>
-<p><span class="tag">Harness / Gitness</span></p>
-</li>
-<li>
-<p><span class="tag">Automatisation</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="exampleblock">
-<div class="content">
-
-</div>
-</div>
+<table class="tableblock frame-none grid-none stripes-none stretch tech-tags">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Python</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Quarkus</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Examplars / Mimir</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">React</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">OpenTelemetry</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Harness / Gitness</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">FastAPI</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Grafana</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Automatisation</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Java 23</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">QuickWit</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -484,72 +489,35 @@ Période
 <div class="paragraph card-title">
 <p><strong>Technologies et compétences:</strong></p>
 </div>
-<div class="exampleblock tech-tags columns tech-columns">
-<div class="content">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Dynatrace</span></p>
-</li>
-<li>
-<p><span class="tag">Ansible</span></p>
-</li>
-<li>
-<p><span class="tag">Documentation technique</span></p>
-</li>
-<li>
-<p><span class="tag">OpenShift/Kubernetes</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Python</span></p>
-</li>
-<li>
-<p><span class="tag">MonAco</span></p>
-</li>
-<li>
-<p><span class="tag">AppDynamics</span></p>
-</li>
-<li>
-<p><span class="tag">Zabbix</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Splunk</span></p>
-</li>
-<li>
-<p><span class="tag">Automatisation</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="exampleblock">
-<div class="content">
-
-</div>
-</div>
+<table class="tableblock frame-none grid-none stripes-none stretch tech-tags">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Dynatrace</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Python</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Splunk</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Ansible</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">MonAco</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Automatisation</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Documentation technique</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">AppDynamics</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">OpenShift/Kubernetes</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Zabbix</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -607,54 +575,35 @@ Période
 <div class="paragraph card-title">
 <p><strong>Technologies et compétences:</strong></p>
 </div>
-<div class="exampleblock tech-tags columns tech-columns">
-<div class="content">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Pascal / Delphi</span></p>
-</li>
-<li>
-<p><span class="tag">Firebird</span></p>
-</li>
-<li>
-<p><span class="tag">Support client / technique</span></p>
-</li>
-<li>
-<p><span class="tag">Kubernetes / K3S</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Ansible</span></p>
-</li>
-<li>
-<p><span class="tag">Pipeline CI/CD</span></p>
-</li>
-<li>
-<p><span class="tag">Traefik</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="exampleblock">
-<div class="content">
-
-</div>
-</div>
+<table class="tableblock frame-none grid-none stripes-none stretch tech-tags">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Pascal / Delphi</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Ansible</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Firebird</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Pipeline CI/CD</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Support client / technique</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Traefik</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Kubernetes / K3S</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -721,57 +670,35 @@ Période
 <div class="paragraph card-title">
 <p><strong>Technologies - Languages:</strong></p>
 </div>
-<div class="exampleblock tech-tags columns tech-columns">
-<div class="content">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Docker / Compose</span></p>
-</li>
-<li>
-<p><span class="tag">Kubernetes - Swarm - Traefik</span></p>
-</li>
-<li>
-<p><span class="tag">Nginx</span></p>
-</li>
-<li>
-<p><span class="tag">Terraform</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Gitlab CI – Travis</span></p>
-</li>
-<li>
-<p><span class="tag">Debian</span></p>
-</li>
-<li>
-<p><span class="tag">Go (docker API) - Bash – Python - Angular</span></p>
-</li>
-<li>
-<p><span class="tag">Cloud provider - Scaleway</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="exampleblock">
-<div class="content">
-
-</div>
-</div>
+<table class="tableblock frame-none grid-none stripes-none stretch tech-tags">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Docker / Compose</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Gitlab CI – Travis</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Kubernetes - Swarm - Traefik</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Debian</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Nginx</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Go (docker API) - Bash – Python - Angular</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Terraform</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Cloud provider - Scaleway</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -829,57 +756,35 @@ Période
 <div class="paragraph card-title">
 <p><strong>Technologies - Rôles - Languages:</strong></p>
 </div>
-<div class="exampleblock tech-tags columns tech-columns">
-<div class="content">
-
-</div>
-</div>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Help Desk</span></p>
-</li>
-<li>
-<p><span class="tag">Interventions technique</span></p>
-</li>
-<li>
-<p><span class="tag">Hotline technique</span></p>
-</li>
-<li>
-<p><span class="tag">Proxmox</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><span class="tag">Réseau entreprise</span></p>
-</li>
-<li>
-<p><span class="tag">Android - Java – Bash - PHP - HTML - CSS</span></p>
-</li>
-<li>
-<p><span class="tag">Telnet</span></p>
-</li>
-<li>
-<p><span class="tag">PHP 7</span></p>
-</li>
-</ul>
-</div>
-<div class="openblock">
-<div class="content">
-<div class="exampleblock">
-<div class="content">
-
-</div>
-</div>
+<table class="tableblock frame-none grid-none stripes-none stretch tech-tags">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Help Desk</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Réseau entreprise</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Interventions technique</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Android - Java – Bash - PHP - HTML - CSS</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Hotline technique</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Telnet</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Proxmox</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">PHP 7</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -1003,7 +908,7 @@ Diplôme
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2025-03-21 19:58:29 UTC
+Last updated 2025-03-21 20:05:03 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
