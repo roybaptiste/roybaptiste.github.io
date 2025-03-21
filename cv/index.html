@@ -100,11 +100,27 @@ li {
 
 /* Tags */
 .tech-tags {
-    display: flex;
-    flex-wrap: wrap;
     margin-bottom: 15px;
     font-size: 12px;
     font-weight: bold;
+}
+
+/* Technology Columns */
+.columns.tech-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.columns.tech-columns .column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.columns.tech-columns .tag {
+    display: block;
+    margin-bottom: 5px;
 }
 
 /* Education */
@@ -194,6 +210,10 @@ table.tableblock a:hover {
     table.tableblock tr:nth-child(even) {
         background-color: transparent;
     }
+    
+    .columns.tech-columns {
+        page-break-inside: avoid;
+    }
 } 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -246,16 +266,16 @@ table.tableblock a:hover {
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Contacts &amp; Réseaux sociaux</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-envelope"></i></span> &lt;a href="mailto:roy.baptiste45@gmail.com"&gt;E-Mail <a href="mailto:roy.baptiste45@gmail.com">roy.baptiste45@gmail.com</a>&lt;/a&gt;</p>
+<p><span class="icon"><i class="fa fa-envelope"></i></span> <a href="mailto:roy.baptiste45@gmail.com" class="external" target="_blank" rel="noopener">E-Mail <a href="mailto:roy.baptiste45@gmail.com">roy.baptiste45@gmail.com</a></a></p>
 </div>
 <div class="paragraph">
-<p><span class="icon"><i class="fa fa-github"></i></span> &lt;a href="https://github.com/roybaptiste"&gt;Github roybaptiste&lt;/a&gt;</p>
+<p><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/roybaptiste" class="external" target="_blank" rel="noopener">Github roybaptiste</a></p>
 </div>
 <div class="paragraph">
-<p><span class="icon"><i class="fa fa-twitter"></i></span> &lt;a href="https://twitter.com/BaptisteRoy37"&gt;@BaptisteRoy37&lt;/a&gt;</p>
+<p><span class="icon"><i class="fa fa-twitter"></i></span> <a href="https://twitter.com/BaptisteRoy37" class="external" target="_blank" rel="noopener">@BaptisteRoy37</a></p>
 </div>
 <div class="paragraph">
-<p><span class="icon"><i class="fa fa-linkedin"></i></span> &lt;a href="https://www.linkedin.com/in/roy-baptiste/"&gt;Linkedin Profile&lt;/a&gt;</p>
+<p><span class="icon"><i class="fa fa-linkedin"></i></span> <a href="https://www.linkedin.com/in/roy-baptiste/" class="external" target="_blank" rel="noopener">Linkedin Profile</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -320,7 +340,14 @@ Période
 <div class="paragraph card-title">
 <p><strong>Technologies et compétences:</strong></p>
 </div>
-<div class="ulist tech-tags">
+<div class="exampleblock tech-tags columns tech-columns">
+<div class="content">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
 <ul>
 <li>
 <p><span class="tag highlight">Python</span></p>
@@ -334,6 +361,15 @@ Période
 <li>
 <p><span class="tag">Java 23</span></p>
 </li>
+</ul>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><span class="tag">Quarkus</span></p>
 </li>
@@ -346,6 +382,15 @@ Période
 <li>
 <p><span class="tag">QuickWit</span></p>
 </li>
+</ul>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><span class="tag">Examplars / Mimir</span></p>
 </li>
@@ -356,6 +401,13 @@ Période
 <p><span class="tag">Automatisation</span></p>
 </li>
 </ul>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="exampleblock">
+<div class="content">
+
+</div>
 </div>
 </div>
 </div>
@@ -432,7 +484,14 @@ Période
 <div class="paragraph card-title">
 <p><strong>Technologies et compétences:</strong></p>
 </div>
-<div class="ulist tech-tags">
+<div class="exampleblock tech-tags columns tech-columns">
+<div class="content">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
 <ul>
 <li>
 <p><span class="tag">Dynatrace</span></p>
@@ -446,6 +505,15 @@ Période
 <li>
 <p><span class="tag">OpenShift/Kubernetes</span></p>
 </li>
+</ul>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><span class="tag">Python</span></p>
 </li>
@@ -458,6 +526,15 @@ Période
 <li>
 <p><span class="tag">Zabbix</span></p>
 </li>
+</ul>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><span class="tag">Splunk</span></p>
 </li>
@@ -465,6 +542,13 @@ Période
 <p><span class="tag">Automatisation</span></p>
 </li>
 </ul>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="exampleblock">
+<div class="content">
+
+</div>
 </div>
 </div>
 </div>
@@ -523,7 +607,14 @@ Période
 <div class="paragraph card-title">
 <p><strong>Technologies et compétences:</strong></p>
 </div>
-<div class="ulist tech-tags">
+<div class="exampleblock tech-tags columns tech-columns">
+<div class="content">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
 <ul>
 <li>
 <p><span class="tag">Pascal / Delphi</span></p>
@@ -537,6 +628,15 @@ Période
 <li>
 <p><span class="tag">Kubernetes / K3S</span></p>
 </li>
+</ul>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><span class="tag">Ansible</span></p>
 </li>
@@ -547,6 +647,13 @@ Période
 <p><span class="tag">Traefik</span></p>
 </li>
 </ul>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="exampleblock">
+<div class="content">
+
+</div>
 </div>
 </div>
 </div>
@@ -614,7 +721,14 @@ Période
 <div class="paragraph card-title">
 <p><strong>Technologies - Languages:</strong></p>
 </div>
-<div class="ulist tech-tags">
+<div class="exampleblock tech-tags columns tech-columns">
+<div class="content">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
 <ul>
 <li>
 <p><span class="tag">Docker / Compose</span></p>
@@ -628,6 +742,15 @@ Période
 <li>
 <p><span class="tag">Terraform</span></p>
 </li>
+</ul>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><span class="tag">Gitlab CI – Travis</span></p>
 </li>
@@ -641,6 +764,13 @@ Période
 <p><span class="tag">Cloud provider - Scaleway</span></p>
 </li>
 </ul>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="exampleblock">
+<div class="content">
+
+</div>
 </div>
 </div>
 </div>
@@ -699,7 +829,14 @@ Période
 <div class="paragraph card-title">
 <p><strong>Technologies - Rôles - Languages:</strong></p>
 </div>
-<div class="ulist tech-tags">
+<div class="exampleblock tech-tags columns tech-columns">
+<div class="content">
+
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
 <ul>
 <li>
 <p><span class="tag">Help Desk</span></p>
@@ -713,6 +850,15 @@ Période
 <li>
 <p><span class="tag">Proxmox</span></p>
 </li>
+</ul>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><span class="tag">Réseau entreprise</span></p>
 </li>
@@ -726,6 +872,13 @@ Période
 <p><span class="tag">PHP 7</span></p>
 </li>
 </ul>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="exampleblock">
+<div class="content">
+
+</div>
 </div>
 </div>
 </div>
@@ -850,7 +1003,7 @@ Diplôme
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2025-03-21 19:50:57 UTC
+Last updated 2025-03-21 19:58:29 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
