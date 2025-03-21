@@ -123,6 +123,47 @@ li {
     display: none;
 }
 
+/* Table styles for profile */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    font-size: 13px;
+}
+
+table.tableblock {
+    background-color: #f8f9fa;
+}
+
+table.tableblock tr:nth-child(even) {
+    background-color: #f0f2f5;
+}
+
+table.tableblock td:first-child {
+    font-weight: bold;
+    width: 30%;
+}
+
+table.tableblock a {
+    color: #333;
+    text-decoration: none;
+}
+
+table.tableblock a:hover {
+    text-decoration: underline;
+}
+
+/* Icon styles */
+.icon {
+    margin-right: 5px;
+}
+
 /* Print styles */
 @media print {
     body {
@@ -144,6 +185,14 @@ li {
     
     .tech-tags {
         font-size: 9pt;
+    }
+    
+    table.tableblock {
+        background-color: transparent;
+    }
+    
+    table.tableblock tr:nth-child(even) {
+        background-color: transparent;
     }
 } 
 </style>
@@ -172,57 +221,53 @@ li {
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph lead text-center">
-<p>EXPERT DEVOPS ENGINEER - OBSERVABILITY ADMIN</p>
-</div>
-<div class="exampleblock intro text-center">
-<div class="content">
-<div class="paragraph">
-<p>Ce Curriculum Vitae a été réalisé en format HTML5 grâce à AsciiDoctor - Github Actions - Github Pages</p>
-</div>
-</div>
+<div class="cv-header">
+  <h1>ROY BAPTISTE</h1>
+  <h2>EXPERT DEVOPS ENGINEER - OBSERVABILITY ADMIN</h2>
+  <div class="cv-contact">10 passage Contreau - Le Mans | roy.baptiste45@gmail.com <a href="https://www.linkedin.com/in/roy-baptiste/" target="_blank">roy-baptiste</a> | Permis B</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="profil-personnel"><a class="anchor" href="#profil-personnel"></a><a class="link" href="#profil-personnel"><span class="icon"><i class="fa fa-user"></i></span> Profil Personnel</a></h2>
 <div class="sectionbody">
-<div class="openblock card profile">
-<div class="content">
-<table class="tableblock frame-none grid-none stripes-even stretch">
+<table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
+<col style="width: 25%;">
+<col style="width: 75%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>Qui-suis-je?</strong></th>
+<th class="tableblock halign-left valign-top">Qui-suis-je?</th>
 <th class="tableblock halign-left valign-top">Baptiste ROY - 20/08/1990</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Contacts &amp; Réseaux sociaux</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contacts &amp; Réseaux sociaux</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="icon"><i class="fa fa-envelope"></i></span> <a href="mailto:roy.baptiste45@gmail.com" class="external" target="_blank" rel="noopener">E-Mail <a href="mailto:roy.baptiste45@gmail.com">roy.baptiste45@gmail.com</a></a></p>
+<p><span class="icon"><i class="fa fa-envelope"></i></span> &lt;a href="mailto:roy.baptiste45@gmail.com"&gt;E-Mail <a href="mailto:roy.baptiste45@gmail.com">roy.baptiste45@gmail.com</a>&lt;/a&gt;</p>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-github"></i></span> &lt;a href="https://github.com/roybaptiste"&gt;Github roybaptiste&lt;/a&gt;</p>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-twitter"></i></span> &lt;a href="https://twitter.com/BaptisteRoy37"&gt;@BaptisteRoy37&lt;/a&gt;</p>
+</div>
+<div class="paragraph">
+<p><span class="icon"><i class="fa fa-linkedin"></i></span> &lt;a href="https://www.linkedin.com/in/roy-baptiste/"&gt;Linkedin Profile&lt;/a&gt;</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-github"></i></span> <a href="https://github.com/roybaptiste" class="external" target="_blank" rel="noopener">Github roybaptiste</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-twitter"></i></span> <a href="https://twitter.com/BaptisteRoy37" class="external" target="_blank" rel="noopener">@BaptisteRoy37</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-linkedin"></i></span> <a href="https://www.linkedin.com/in/roy-baptiste/" class="external" target="_blank" rel="noopener">Linkedin Profile</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Location</strong></p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Location</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">10 passage Contreau Le Mans</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Phone</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Phone</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+33(0)6 63 15 30 15</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -805,7 +850,7 @@ Diplôme
 <div id="footer">
 <div id="footer-text">
 Version 2.0<br>
-Last updated 2025-03-21 19:42:22 UTC
+Last updated 2025-03-21 19:50:57 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
