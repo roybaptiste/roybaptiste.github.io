@@ -292,40 +292,40 @@ table.tableblock a:hover {
     text-transform: uppercase;
 }
 
-/* Hide the document title but keep styles */
-#header h1 {
-    display: none;
+/* Masquer complètement l'en-tête du document */
+#header {
+    display: none !important;
 }
 
-/* Hidden title */
-h1.hidden-title {
-    display: none;
+#toc::before {
+    display: none !important;
+}
+
+/* S'assurer que ces titres sont également masqués */
+.hidden-title, 
+h1.hidden-title, 
+h1#hidden-title,
+#preamble .sectionbody .paragraph:first-child {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Empêcher l'affichage de toute information d'en-tête */
+#header .details {
+    display: none !important;
 } 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
 </head>
 <body class="article toc2 toc-left">
-<div id="header">
-<h1>hidden-title</h1>
-<div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#profil-personnel"><span class="icon"><i class="fa fa-user"></i></span> Profil Personnel</a></li>
-<li><a href="#experience-professionnelle"><span class="icon"><i class="fa fa-briefcase"></i></span> Expérience Professionnelle</a></li>
-<li><a href="#_formation"><span class="section-header"><span class="icon"><i class="fa fa-graduation-cap"></i></span> Formation</span></a></li>
-<li><a href="#competences"><span class="icon"><i class="fa fa-cogs"></i></span> Compétences</a></li>
-</ul>
-</div>
-</div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
 <div style="display:none">
 <h1>Curriculum Vitae | Baptiste ROY</h1>
-</div>
-<div class="paragraph lead text-center">
-<p>EXPERT DEVOPS ENGINEER - OBSERVABILITY ADMIN</p>
 </div>
 <div class="cv-header">
   <h1>ROY BAPTISTE</h1>
@@ -382,7 +382,7 @@ h1.hidden-title {
 <div class="exampleblock timeline">
 <div class="content">
 <div class="paragraph experience-title">
-<p>DevOps Expert - Observability Engineer chez APSIDE</p>
+<p><mark>#</mark> DevOps Expert - Observability Engineer chez APSIDE</p>
 </div>
 <div class="hdlist">
 <table>
@@ -462,7 +462,7 @@ Période
 <div class="exampleblock timeline">
 <div class="content">
 <div class="paragraph experience-title">
-<p>Administrateur Dynatrace - Lead intégrateur - Assurance chez COVEA</p>
+<p><mark>#</mark> Administrateur Dynatrace - Lead intégrateur - Assurance chez COVEA</p>
 </div>
 <div class="hdlist">
 <table>
@@ -566,7 +566,7 @@ Période
 <div class="exampleblock timeline">
 <div class="content">
 <div class="paragraph experience-title">
-<p>Analyse développeur - DevOps chez MICROTEC</p>
+<p><mark>#</mark> Analyse développeur - DevOps chez MICROTEC</p>
 </div>
 <div class="hdlist">
 <table>
@@ -652,7 +652,7 @@ Période
 <div class="exampleblock timeline">
 <div class="content">
 <div class="paragraph experience-title">
-<p>DevOps / Infrastructure chez Geovelo - La compagnie des mobilités</p>
+<p><mark>#</mark> DevOps / Infrastructure chez Geovelo - La compagnie des mobilités</p>
 </div>
 <div class="hdlist">
 <table>
@@ -747,7 +747,7 @@ Période
 <div class="exampleblock timeline">
 <div class="content">
 <div class="paragraph experience-title">
-<p>Développeur / Gestion de projet chez CMRP/Selfone</p>
+<p><mark>#</mark> Développeur / Gestion de projet chez CMRP/Selfone</p>
 </div>
 <div class="hdlist">
 <table>
@@ -944,11 +944,6 @@ Diplôme
 </div>
 </div>
 </div>
-</div>
-</div>
-<div id="footer">
-<div id="footer-text">
-Last updated 2025-03-22 17:15:42 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
