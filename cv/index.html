@@ -5,9 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="Baptiste ROY">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-<title>Curriculum Vitae | Baptiste ROY</title>
+<title>hidden-title</title>
 <style>
 /* CV Custom Styles for Baptiste ROY */
 
@@ -291,6 +290,16 @@ table.tableblock a:hover {
     border-left: 6px solid #1a56cc;
     margin-bottom: 15px;
     text-transform: uppercase;
+}
+
+/* Hide the document title but keep styles */
+#header h1 {
+    display: none;
+}
+
+/* Hidden title */
+h1.hidden-title {
+    display: none;
 } 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -298,11 +307,7 @@ table.tableblock a:hover {
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Curriculum Vitae | Baptiste ROY</h1>
-<div class="details">
-<span id="author" class="author">Baptiste ROY</span><br>
-<span id="email" class="email"><a href="mailto:roy.baptiste45@gmail.com">roy.baptiste45@gmail.com</a></span><br>
-</div>
+<h1>hidden-title</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -316,6 +321,9 @@ table.tableblock a:hover {
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
+<div style="display:none">
+<h1>Curriculum Vitae | Baptiste ROY</h1>
+</div>
 <div class="paragraph lead text-center">
 <p>EXPERT DEVOPS ENGINEER - OBSERVABILITY ADMIN</p>
 </div>
@@ -940,7 +948,7 @@ Diplôme
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-03-22 17:11:55 UTC
+Last updated 2025-03-22 17:15:42 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
