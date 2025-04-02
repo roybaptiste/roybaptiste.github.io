@@ -295,6 +295,52 @@ table.tableblock a:hover {
     text-transform: uppercase;
 }
 
+/* Conference Section */
+.card.conference {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-left: 4px solid #2c5aa0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card.conference .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0e2d5e;
+    margin-bottom: 10px;
+}
+
+.card.conference [horizontal] {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #666;
+}
+
+.card.conference [horizontal]::before {
+    content: "";
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card.conference a {
+    color: #2c5aa0;
+    text-decoration: none;
+}
+
+.card.conference a:hover {
+    text-decoration: underline;
+}
+
+/* Print styles for conferences */
+@media print {
+    .card.conference {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
 /* Masquer complètement l'en-tête du document */
 #header {
     display: none !important;
@@ -823,11 +869,180 @@ Période
 </table>
 </div>
 </div>
+<div class="exampleblock timeline">
+<div class="content">
+<div class="experience-title">ADMINISTRATEUR MULTIGAMING CHEZ TEAM FANTASY</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Période
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>2014</code> - <span class="icon"><i class="fa fa-calendar-check-o"></i></span> <code>2015</code></p>
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock card experience">
+<div class="content">
+<div class="paragraph card-title">
+<p><strong>Description et responsabilités:</strong></p>
+</div>
+<div class="ulist card-content">
+<ul>
+<li>
+<p>Administration, management et gestion de section (300 personnes) au sein d&#8217;une association multigaming de 2000 personnes</p>
+</li>
+<li>
+<p>Création du site internet</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph card-title">
+<p><strong>Technologies et compétences:</strong></p>
+</div>
+<table class="tableblock frame-none grid-none stripes-none stretch tech-tags">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Gestion d&#8217;équipe</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Web développement</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Community management</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="tag">Administration</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_formation"><a class="anchor" href="#_formation"></a><a class="link" href="#_formation"><span class="section-header"><span class="icon"><i class="fa fa-graduation-cap"></i></span> Formation</span></a></h2>
 <div class="sectionbody">
+<div class="exampleblock card education">
+<div class="content">
+<div class="paragraph">
+<p>Dynatrace PowerUser - Formation officielle</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Formateur
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-user"></i></span> Ousmane DIALLO - Delivery Architect de Dynatrace</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Durée
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-clock-o"></i></span> 3 jours</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Date
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>2024</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="exampleblock card education">
+<div class="content">
+<div class="paragraph">
+<p>Dynatrace - Du concept à l&#8217;expertise</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Formateur
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-user"></i></span> Martin LEKPA - SPARKS</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Description
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-info-circle"></i></span> Formation réalisée en commun - Création d&#8217;une plateforme de parcours dédiée à l&#8217;observabilité</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Durée
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-clock-o"></i></span> 2 jours</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Date
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>2025</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="exampleblock card education">
+<div class="content">
+<div class="paragraph">
+<p>EMEA Grafana Partner BootCamp (international) - Formation officielle</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Formateur
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-user"></i></span> Naveen KUMAR</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Durée
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-clock-o"></i></span> 4 jours</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Date
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-calendar"></i></span> <code>2024</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 <div class="exampleblock card education">
 <div class="content">
 <div class="paragraph">
@@ -841,6 +1056,57 @@ Diplôme
 </td>
 <td class="hdlist2">
 <p><span class="icon"><i class="fa fa-graduation-cap"></i></span> Obtenu en <code>2015</code></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="conferences"><a class="anchor" href="#conferences"></a><a class="link" href="#conferences"><span class="icon"><i class="fa fa-microphone"></i></span> Conférencier</a></h2>
+<div class="sectionbody">
+<div class="exampleblock card conference">
+<div class="content">
+<div class="paragraph">
+<p>"Ok boomer, arrête de surveiller ton infra" - Introduction détaillée au monitoring / observabilité</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Organisation
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-users"></i></span> Google Developer Group</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Lien
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-youtube"></i></span> <a href="https://www.youtube.com/watch?v=TO_BYULeOes" class="external" target="_blank" rel="noopener">Voir la conférence</a></p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="exampleblock card conference">
+<div class="content">
+<div class="paragraph">
+<p>"OSS 404 : Le Mans ne répond plus" - Mise en place stack OpenSource OpenTelemetry/Grafana/Quickwit</p>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Statut
+</td>
+<td class="hdlist2">
+<p><span class="icon"><i class="fa fa-clock-o"></i></span> À venir</p>
 </td>
 </tr>
 </table>
